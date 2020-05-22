@@ -20,6 +20,10 @@ import { FormsModule } from '@angular/forms';
 import { AddstudentsComponent } from './addstudents/addstudents.component';
 import { LoginComponent } from './login/login.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule, MatInput } from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,12 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSortModule,
     HttpClientModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

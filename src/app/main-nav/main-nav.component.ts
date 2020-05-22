@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from './../login/auth.service';
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -16,6 +18,11 @@ export class MainNavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
+  constructor(private breakpointObserver: BreakpointObserver,
+    private authService: AuthService,
+    private router: Router) {}
+  onLogout(): void {
+    this.router.navigate(["/login"]);
+    this.authService.isLogin = false;
+  }
 }

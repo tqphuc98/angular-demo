@@ -18,4 +18,6 @@
 .avt {
   cursor: pointer;
 }
-
+.olfocus-none:focus {
+  outline: none;
+}
